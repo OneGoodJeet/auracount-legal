@@ -122,7 +122,7 @@
     <div class="container">
         <div class="logo">AuraCount</div>
         <h1>Terms of Service</h1>
-        <p class="effective-date">Effective Date: March 18, 2026</p>
+        <p class="effective-date">Effective Date: March 26, 2026</p>
 
         <div class="nav-links">
             <a href="terms.html" class="active">Terms of Service</a>
@@ -149,7 +149,9 @@
                 <li><a href="#liability">Limitation of Liability</a></li>
                 <li><a href="#indemnification">Indemnification</a></li>
                 <li><a href="#termination">Termination</a></li>
-                <li><a href="#governing-law">Governing Law</a></li>
+                <li><a href="#governing-law">Governing Law &amp; Dispute Resolution</a></li>
+                <li><a href="#force-majeure">Force Majeure</a></li>
+                <li><a href="#apple-beneficiary">Apple Third-Party Beneficiary</a></li>
                 <li><a href="#changes">Changes to These Terms</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ol>
@@ -164,12 +166,8 @@
         <p>By creating an account, subscribing, or otherwise using AuraCount, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="privacy.html">Privacy Policy</a>, which is incorporated herein by reference.</p>
 
         <h2 id="eligibility">2. Eligibility</h2>
-        <p>To use AuraCount, you must:</p>
-        <ul>
-            <li>Be at least 18 years of age and have the legal capacity to enter into a binding agreement; or</li>
-            <li>Be at least 13 years of age and have obtained verifiable consent from a parent or legal guardian to use the Service and agree to these Terms on your behalf.</li>
-        </ul>
-        <p>If you are under 13 years of age, you may not use AuraCount. By using the Service, you represent and warrant that you meet the applicable age requirement.</p>
+        <p>To use AuraCount, you must be at least 13 years of age. If you are between 13 and 17 years of age, you represent that your parent or legal guardian has reviewed and agrees to these Terms on your behalf. If you are under 13 years of age, you may not use AuraCount.</p>
+        <p>By using the Service, you represent and warrant that you meet the applicable age requirement and have the legal capacity (or parental permission) to enter into these Terms.</p>
 
         <h2 id="description">3. Description of Service</h2>
         <p>AuraCount is a music listening analytics application that provides insights, statistics, and visualizations based on your listening history from connected music platforms. The Service includes:</p>
@@ -191,6 +189,7 @@
         <p>To use AuraCount, you must create an account using one of the following methods:</p>
         <ul>
             <li><strong>Sign in with Apple:</strong> Authentication managed by Apple Inc. Subject to Apple's terms and privacy policies.</li>
+            <li><strong>Email &amp; Password:</strong> You provide an email address and password. Your password is securely hashed by our authentication provider and never stored in plaintext.</li>
             <li><strong>Spotify Account Connection:</strong> OAuth 2.0 with PKCE (Proof Key for Code Exchange) authentication. No passwords are stored by AuraCount. Subject to Spotify's terms of service.</li>
         </ul>
         <p>You are responsible for maintaining the security of your account credentials and for all activity that occurs under your account. You must notify us immediately at <a href="mailto:support@auracount.app">support@auracount.app</a> if you become aware of any unauthorized access to your account.</p>
@@ -205,16 +204,13 @@
         </ul>
         <p>Prices are in US dollars and may vary by region based on App Store pricing. Applicable taxes may apply.</p>
 
-        <h3>5.2 Free Trial</h3>
-        <p>New subscribers are eligible for a 3-day free trial. A valid payment method is required to begin the trial. If you do not cancel at least 24 hours before the trial ends, you will be automatically charged for the selected subscription plan.</p>
-
-        <h3>5.3 Billing &amp; Renewal</h3>
+        <h3>5.2 Billing &amp; Renewal</h3>
         <p>All payments are processed through Apple's App Store. Your subscription automatically renews at the end of each billing period unless cancelled at least 24 hours before the renewal date. Payment will be charged to your Apple ID account.</p>
 
-        <h3>5.4 Cancellation</h3>
+        <h3>5.3 Cancellation</h3>
         <p>You may cancel your subscription at any time through your Apple ID settings (Settings &gt; Apple ID &gt; Subscriptions). Cancellation takes effect at the end of the current billing period. You will retain access to all features until the subscription expires. No partial refunds are provided for unused portions of a billing period.</p>
 
-        <h3>5.5 Refunds</h3>
+        <h3>5.4 Refunds</h3>
         <p>Refund requests are managed by Apple in accordance with their refund policies. We do not process refunds directly. To request a refund, contact Apple Support or visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
 
         <h2 id="data-usage">6. Data Collection &amp; Usage</h2>
@@ -241,11 +237,12 @@
         <p>"User Content" refers to any information, data, or content you create, submit, or provide through the Service, including but not limited to:</p>
         <ul>
             <li>Music ratings and reviews</li>
-            <li>Profile information and display name</li>
+            <li>Profile information, display name, and profile photos</li>
             <li>Friend connections and social interactions</li>
             <li>Shared stat cards and recap content</li>
+            <li>Bug reports and feature request feedback</li>
         </ul>
-        <p>You retain ownership of your User Content. By submitting User Content to AuraCount, you grant Big Yesh LLC a worldwide, non-exclusive, royalty-free, transferable license to use, reproduce, modify, display, and distribute your User Content solely for the purpose of operating, improving, and providing the Service.</p>
+        <p>You retain ownership of your User Content. By submitting User Content to AuraCount, you grant Big Yesh LLC a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, display, and distribute your User Content solely for the purpose of operating, improving, and providing the Service. This license does not permit us to sell your User Content or share it with third parties for their own purposes.</p>
         <p>You represent and warrant that you own or have the necessary rights to your User Content and that it does not infringe upon the rights of any third party.</p>
 
         <h2 id="social">9. Social Features</h2>
@@ -254,9 +251,11 @@
             <li>Connect with friends and view their listening activity</li>
             <li>Participate in leaderboards and listening comparisons</li>
             <li>Share stat cards and achievements</li>
+            <li>Invite friends via shareable invite codes (one-time use, valid for 7 days)</li>
+            <li>Discover friends through opt-in contact matching (using hashed email addresses only)</li>
         </ul>
         <p>You have full control over your social visibility through the Privacy Settings within the app. You may adjust your profile visibility, listening activity sharing, and leaderboard participation at any time. Social features are opt-in and require mutual friend connections or explicit sharing actions.</p>
-        <p>You agree not to use social features to harass, stalk, or otherwise engage in behavior that is harmful or offensive to other users.</p>
+        <p>You agree not to use social features to harass, stalk, or otherwise engage in behavior that is harmful or offensive to other users. You agree not to abuse the invite system by distributing invite codes via spam, selling invite codes, or generating excessive codes for any purpose.</p>
 
         <h2 id="ip">10. Intellectual Property</h2>
         <p>The AuraCount application, including its design, code, features, graphics, user interface, and all related intellectual property, is owned by Big Yesh LLC and is protected by copyright, trademark, and other intellectual property laws.</p>
@@ -326,15 +325,24 @@
         <p>You may terminate your use of the Service at any time by cancelling your subscription and deleting your account. Upon termination, your right to use the Service ceases immediately.</p>
         <p>Sections that by their nature should survive termination shall survive, including but not limited to: Intellectual Property, Disclaimers, Limitation of Liability, Indemnification, and Governing Law.</p>
 
-        <h2 id="governing-law">18. Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of the United States. Any disputes arising from or relating to these Terms or the Service shall be resolved in the courts of competent jurisdiction.</p>
+        <h2 id="governing-law">18. Governing Law &amp; Dispute Resolution</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the State of Arizona, without regard to its conflict of laws principles.</p>
+        <p>Any dispute, claim, or controversy arising out of or relating to these Terms or the Service shall first be attempted to be resolved through good-faith informal negotiation by contacting us at <a href="mailto:support@auracount.app">support@auracount.app</a>. If the dispute is not resolved within thirty (30) days, either party may pursue resolution in the state or federal courts located in Arizona.</p>
+        <p>You agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action. You waive any right to participate in a class action lawsuit or class-wide arbitration against Big Yesh LLC.</p>
         <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary so that the remaining provisions shall remain in full force and effect.</p>
 
-        <h2 id="changes">19. Changes to These Terms</h2>
+        <h2 id="force-majeure">19. Force Majeure</h2>
+        <p>Big Yesh LLC shall not be liable for any failure or delay in performing its obligations under these Terms where such failure or delay results from circumstances beyond our reasonable control, including but not limited to: acts of God, natural disasters, pandemic, war, terrorism, government actions, power failures, internet or telecommunications failures, third-party service outages (including Spotify, Apple Music, and cloud infrastructure providers), cyberattacks, or labor disputes.</p>
+
+        <h2 id="apple-beneficiary">20. Apple Third-Party Beneficiary</h2>
+        <p>You acknowledge and agree that Apple Inc. and its subsidiaries are third-party beneficiaries of these Terms, and that upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary thereof. This section is required by the Apple Developer Program License Agreement.</p>
+        <p>In the event of a conflict between these Terms and the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Standard End User License Agreement</a>, the Apple Standard EULA shall take precedence with respect to your use of the app obtained through the Apple App Store.</p>
+
+        <h2 id="changes">21. Changes to These Terms</h2>
         <p>We reserve the right to modify these Terms at any time. If we make material changes, we will notify you by updating the "Effective Date" at the top of this page and, where appropriate, provide additional notice through the app or via email.</p>
         <p>Your continued use of the Service after changes become effective constitutes your acceptance of the revised Terms. If you do not agree to the updated Terms, you must discontinue use of the Service and cancel your subscription.</p>
 
-        <h2 id="contact">20. Contact Us</h2>
+        <h2 id="contact">22. Contact Us</h2>
         <p>If you have any questions, concerns, or feedback about these Terms of Service, please contact us at:</p>
         <p>
             <strong>Big Yesh LLC</strong><br>
