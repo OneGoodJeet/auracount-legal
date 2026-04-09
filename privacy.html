@@ -143,7 +143,7 @@
     <div class="container">
         <div class="logo">AuraCount</div>
         <h1>Privacy Policy</h1>
-        <p class="effective-date">Effective Date: March 18, 2026</p>
+        <p class="effective-date">Effective Date: March 26, 2026</p>
 
         <div class="nav-links">
             <a href="terms.html">Terms of Service</a>
@@ -156,9 +156,11 @@
                 <li><a href="#introduction">Introduction</a></li>
                 <li><a href="#info-collect">Information We Collect</a></li>
                 <li><a href="#how-use">How We Use Your Information</a></li>
+                <li><a href="#lawful-basis">Lawful Basis for Processing (EEA Users)</a></li>
                 <li><a href="#storage">Data Storage &amp; Infrastructure</a></li>
                 <li><a href="#third-party">Third-Party Services</a></li>
                 <li><a href="#sharing">Data Sharing &amp; Disclosure</a></li>
+                <li><a href="#do-not-sell">Do Not Sell or Share My Personal Information</a></li>
                 <li><a href="#security">Data Security</a></li>
                 <li><a href="#rights">Your Rights</a></li>
                 <li><a href="#children">Children's Privacy</a></li>
@@ -183,6 +185,7 @@
         <p>When you create an account, we collect:</p>
         <ul>
             <li><strong>Sign in with Apple:</strong> Apple-provided user identifier, email address (may be a private relay address), and display name</li>
+            <li><strong>Email &amp; Password:</strong> Your email address and a securely hashed password (managed by our authentication provider — we never store plaintext passwords)</li>
             <li><strong>Spotify Connection:</strong> Spotify user ID, display name, and profile image URL (authenticated via OAuth 2.0 with PKCE — we never receive or store your Spotify password)</li>
         </ul>
 
@@ -221,28 +224,31 @@
 
         <h3>2.3 Social &amp; Profile Data</h3>
         <ul>
-            <li><strong>Profile information:</strong> Display name, profile visibility settings</li>
+            <li><strong>Profile information:</strong> Display name, username, profile visibility settings, and profile photo (if uploaded)</li>
             <li><strong>Friend connections:</strong> Mutual friend relationships and associated listening comparisons</li>
-            <li><strong>Contact hashes:</strong> If you opt in to friend discovery, phone number hashes (SHA-256) are used to match contacts — raw phone numbers are never transmitted or stored on our servers</li>
+            <li><strong>Contact hashes:</strong> If you opt in to friend discovery, email address hashes (SHA-256) are used to match contacts — raw email addresses are never transmitted to or stored on our servers</li>
             <li><strong>Activity data:</strong> Leaderboard participation, friend activity visibility preferences</li>
         </ul>
 
         <h3>2.4 User-Generated Content</h3>
         <ul>
-            <li><strong>Ratings:</strong> Star ratings (0.5–5.0 scale) for tracks and albums</li>
+            <li><strong>Ratings:</strong> Star ratings (0.5–5.0 scale) for tracks and albums, with optional text reviews</li>
             <li><strong>Shared content:</strong> Stat cards and recap images you choose to share externally</li>
+            <li><strong>Feedback:</strong> Bug reports and feature requests you submit, including optional screenshots, device model, OS version, and app version</li>
+            <li><strong>Profile photos:</strong> If you upload an avatar, it is resized, compressed, and stored securely in cloud storage</li>
         </ul>
 
         <h3>2.5 Device &amp; Technical Data</h3>
         <ul>
-            <li>Device type and operating system version</li>
+            <li>Device type (model) and operating system version</li>
             <li>App version</li>
-            <li>Crash logs (for stability improvements only)</li>
+            <li>Crash logs and error diagnostics (sanitized — file paths and long strings are redacted before upload)</li>
+            <li>Push notification tokens (if you enable notifications), used solely for delivering notifications you have opted into</li>
         </ul>
 
         <h3>2.6 Information We Do NOT Collect</h3>
         <div class="highlight">
-            <p>We do not collect: precise location data, financial/payment information (Apple handles all billing), browsing history, contacts (only hashed phone numbers for opt-in friend discovery), or advertising identifiers. We do not use any third-party analytics SDKs or advertising frameworks.</p>
+            <p>We do not collect: precise location data, financial or payment information (Apple handles all billing), browsing history, phone numbers, or advertising identifiers. We do not use any third-party analytics SDKs or advertising frameworks. Contact matching uses only SHA-256 hashed email addresses — raw contacts are never transmitted.</p>
         </div>
 
         <h2 id="how-use">3. How We Use Your Information</h2>
@@ -256,12 +262,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Generate listening analytics &amp; charts</td>
+                    <td>Generate listening analytics, charts &amp; insights</td>
                     <td>Listening history, play metadata</td>
-                </tr>
-                <tr>
-                    <td>Compute listening personality &amp; insights</td>
-                    <td>Listening patterns, genre data</td>
                 </tr>
                 <tr>
                     <td>Track milestones &amp; achievements</td>
@@ -277,15 +279,19 @@
                 </tr>
                 <tr>
                     <td>Friend discovery</td>
-                    <td>Hashed contact data (opt-in only)</td>
+                    <td>Hashed email addresses (opt-in only)</td>
                 </tr>
                 <tr>
-                    <td>Send listening notifications</td>
-                    <td>Device tokens, notification preferences</td>
+                    <td>Send notifications (milestones, recaps, friends)</td>
+                    <td>Push notification tokens, notification preferences</td>
                 </tr>
                 <tr>
                     <td>Improve app stability</td>
                     <td>Crash logs, device info</td>
+                </tr>
+                <tr>
+                    <td>Respond to feedback &amp; support</td>
+                    <td>Feedback submissions, device info</td>
                 </tr>
                 <tr>
                     <td>Manage your account &amp; subscription</td>
@@ -294,23 +300,58 @@
             </tbody>
         </table>
 
-        <h2 id="storage">4. Data Storage &amp; Infrastructure</h2>
+        <h2 id="lawful-basis">4. Lawful Basis for Processing (EEA Users)</h2>
+        <p>If you are located in the European Economic Area, we process your personal data under the following legal bases as required by the General Data Protection Regulation (GDPR):</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Lawful Basis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Account information, listening data, subscription data</td>
+                    <td><strong>Contractual necessity</strong> — required to provide the Service you subscribed to</td>
+                </tr>
+                <tr>
+                    <td>Social features, friend discovery, contact matching</td>
+                    <td><strong>Consent</strong> — opt-in features you choose to enable</td>
+                </tr>
+                <tr>
+                    <td>Crash logs, error diagnostics</td>
+                    <td><strong>Legitimate interest</strong> — maintaining app stability and fixing bugs</td>
+                </tr>
+                <tr>
+                    <td>Push notifications</td>
+                    <td><strong>Consent</strong> — you grant permission via iOS system prompt</td>
+                </tr>
+                <tr>
+                    <td>Feedback submissions</td>
+                    <td><strong>Consent</strong> — voluntarily submitted by you</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You may withdraw consent for consent-based processing at any time by disabling the relevant feature or contacting us at <a href="mailto:support@auracount.app">support@auracount.app</a>.</p>
 
-        <h3>4.1 Local Storage</h3>
+        <h2 id="storage">5. Data Storage &amp; Infrastructure</h2>
+
+        <h3>5.1 Local Storage</h3>
         <p>AuraCount stores data locally on your device using Apple's SwiftData framework. Local data includes your full listening history, cached analytics results, and app preferences. Local data is protected by your device's built-in encryption and access controls.</p>
 
-        <h3>4.2 Cloud Storage</h3>
+        <h3>5.2 Cloud Storage</h3>
         <p>To enable social features and data backup, a subset of your data is synced to our cloud infrastructure powered by <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a>, which is hosted on Amazon Web Services (AWS). Cloud-stored data includes:</p>
         <ul>
             <li>Listening history (for social comparisons and leaderboards)</li>
             <li>Profile and account information</li>
             <li>Friend connections and social preferences</li>
-            <li>Ratings</li>
+            <li>Ratings and reviews</li>
             <li>Milestones and recaps</li>
+            <li>Crash logs and feedback submissions</li>
         </ul>
-        <p>Data syncs automatically on app launch, after new listening data is tracked, after data imports, and during background refresh cycles.</p>
+        <p>Data syncs automatically on app launch, after new listening data is tracked, after data imports, and during periodic background refresh cycles. The app may refresh data in the background approximately every 30 minutes to keep your listening history up to date.</p>
 
-        <h2 id="third-party">5. Third-Party Services</h2>
+        <h2 id="third-party">6. Third-Party Services</h2>
         <p>AuraCount integrates with the following third-party services, each governed by their own privacy policies:</p>
 
         <table>
@@ -350,14 +391,14 @@
                 <tr>
                     <td>Deezer API / iTunes Search API</td>
                     <td>Artist image and track artwork resolution</td>
-                    <td>Artist/track names for search queries (no user data)</td>
+                    <td>Artist and track names for search queries only — no personal user data is shared with these services</td>
                 </tr>
             </tbody>
         </table>
 
         <p>We do not integrate any advertising networks, third-party analytics platforms, or data brokers.</p>
 
-        <h2 id="sharing">6. Data Sharing &amp; Disclosure</h2>
+        <h2 id="sharing">7. Data Sharing &amp; Disclosure</h2>
 
         <div class="highlight">
             <p>We do not sell, rent, or trade your personal information to third parties. AuraCount is a paid app with no advertising — your data is never monetized.</p>
@@ -372,7 +413,14 @@
             <li><strong>Business transfers:</strong> In connection with a merger, acquisition, or sale of assets, your information may be transferred. We will notify you of any such change.</li>
         </ul>
 
-        <h2 id="security">7. Data Security</h2>
+        <h2 id="do-not-sell">8. Do Not Sell or Share My Personal Information</h2>
+        <p>As required by the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA):</p>
+        <div class="highlight">
+            <p>We do not sell your personal information. We do not share your personal information for cross-context behavioral advertising. There is nothing to opt out of because we do not engage in these practices.</p>
+        </div>
+        <p>AuraCount is entirely funded by subscriptions. We have no advertising relationships, data broker partnerships, or any other arrangements that involve selling or sharing your data for monetary or other valuable consideration.</p>
+
+        <h2 id="security">9. Data Security</h2>
         <p>We take the security of your data seriously and implement multiple layers of protection:</p>
         <ul>
             <li><strong>Authentication tokens:</strong> Encrypted at rest using pgcrypto with Supabase Vault and SECURITY DEFINER database functions</li>
@@ -380,13 +428,14 @@
             <li><strong>Local token storage:</strong> Sensitive tokens stored in the iOS Keychain, not in UserDefaults</li>
             <li><strong>Transport security:</strong> All network communication uses HTTPS/TLS encryption</li>
             <li><strong>Database security:</strong> Row-level security (RLS) policies ensure users can only access their own data</li>
+            <li><strong>Crash log sanitization:</strong> File paths and long strings are redacted from crash logs before upload</li>
             <li><strong>Account deletion:</strong> Complete data removal via server-side edge function that purges all user data from all tables</li>
         </ul>
         <p>While we strive to protect your information, no method of electronic storage or transmission is 100% secure. We cannot guarantee absolute security but are committed to implementing industry-standard practices.</p>
 
-        <h2 id="rights">8. Your Rights</h2>
+        <h2 id="rights">10. Your Rights</h2>
 
-        <h3>8.1 All Users</h3>
+        <h3>10.1 All Users</h3>
         <p>Regardless of your location, you have the right to:</p>
         <ul>
             <li><strong>Access:</strong> View your data within the app at any time</li>
@@ -395,44 +444,44 @@
             <li><strong>Control sharing:</strong> Adjust your social and privacy settings to control what is visible to others</li>
         </ul>
 
-        <h3>8.2 European Economic Area (GDPR)</h3>
+        <h3>10.2 European Economic Area (GDPR)</h3>
         <p>If you are in the EEA, you have additional rights under the General Data Protection Regulation:</p>
         <ul>
-            <li><strong>Legal basis:</strong> We process your data based on contractual necessity (providing the Service you subscribed to) and your consent (for optional features like social and friend discovery)</li>
-            <li><strong>Data portability:</strong> You may request a machine-readable copy of your personal data</li>
+            <li><strong>Legal basis:</strong> We process your data based on the lawful bases described in <a href="#lawful-basis">Section 4</a></li>
+            <li><strong>Data portability:</strong> You may request a copy of your personal data in a commonly used, machine-readable format by contacting us at <a href="mailto:support@auracount.app">support@auracount.app</a>. We will provide your data within 30 days.</li>
             <li><strong>Restriction:</strong> You may request that we restrict processing of your data</li>
             <li><strong>Objection:</strong> You may object to certain types of data processing</li>
-            <li><strong>Withdraw consent:</strong> You may withdraw consent at any time for consent-based processing</li>
+            <li><strong>Withdraw consent:</strong> You may withdraw consent at any time for consent-based processing (e.g., disabling social features or contact matching)</li>
         </ul>
         <p>To exercise any GDPR rights, contact us at <a href="mailto:support@auracount.app">support@auracount.app</a>. We will respond within 30 days.</p>
 
-        <h3>8.3 California Residents (CCPA/CPRA)</h3>
+        <h3>10.3 California Residents (CCPA/CPRA)</h3>
         <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act and its amendments:</p>
         <ul>
             <li><strong>Right to know:</strong> You may request details about the categories and specific pieces of personal information we have collected</li>
             <li><strong>Right to delete:</strong> You may request deletion of your personal information</li>
-            <li><strong>Right to opt out of sale:</strong> We do not sell your personal information. There is nothing to opt out of.</li>
+            <li><strong>Right to opt out of sale:</strong> We do not sell your personal information. See <a href="#do-not-sell">Section 8</a>.</li>
             <li><strong>Non-discrimination:</strong> We will not discriminate against you for exercising your privacy rights</li>
         </ul>
         <p>To exercise any CCPA rights, contact us at <a href="mailto:support@auracount.app">support@auracount.app</a>.</p>
 
-        <h2 id="children">9. Children's Privacy</h2>
+        <h2 id="children">11. Children's Privacy</h2>
         <p>AuraCount is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child under 13 has provided us with personal information, please contact us at <a href="mailto:support@auracount.app">support@auracount.app</a> and we will promptly delete such information.</p>
-        <p>Users aged 13–17 may use AuraCount with the consent of a parent or legal guardian, as outlined in our <a href="terms.html">Terms of Service</a>.</p>
+        <p>Users aged 13–17 may use AuraCount with the permission of a parent or legal guardian, as outlined in our <a href="terms.html">Terms of Service</a>.</p>
 
-        <h2 id="retention">10. Data Retention</h2>
+        <h2 id="retention">12. Data Retention</h2>
         <p>We retain your personal data for as long as your account is active and you maintain an active subscription. Specifically:</p>
         <ul>
             <li><strong>Active accounts:</strong> All data is retained while your account exists</li>
             <li><strong>Account deletion:</strong> When you delete your account, all cloud-stored data is permanently removed from our servers. Local data is cleared from the device.</li>
             <li><strong>Subscription cancellation:</strong> If you cancel your subscription but do not delete your account, your data remains stored but the app will not be accessible until you resubscribe</li>
-            <li><strong>Crash logs:</strong> Retained for up to 90 days for debugging purposes, then automatically purged</li>
+            <li><strong>Crash logs:</strong> Retained while your account is active and permanently deleted upon account deletion</li>
         </ul>
 
-        <h2 id="international">11. International Data Transfers</h2>
+        <h2 id="international">13. International Data Transfers</h2>
         <p>Your data may be transferred to and processed in countries outside of your country of residence, including the United States, where our cloud infrastructure (Supabase/AWS) is located. We ensure appropriate safeguards are in place for international data transfers in compliance with applicable data protection laws.</p>
 
-        <h2 id="changes">12. Changes to This Policy</h2>
+        <h2 id="changes">14. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time. When we make material changes, we will:</p>
         <ul>
             <li>Update the "Effective Date" at the top of this page</li>
@@ -441,7 +490,7 @@
         </ul>
         <p>Your continued use of AuraCount after changes become effective constitutes your acceptance of the revised policy. We encourage you to review this page periodically.</p>
 
-        <h2 id="contact">13. Contact Us</h2>
+        <h2 id="contact">15. Contact Us</h2>
         <p>If you have any questions about this Privacy Policy, want to exercise your data rights, or have concerns about how your information is handled, please contact us:</p>
         <p>
             <strong>Big Yesh LLC</strong><br>
